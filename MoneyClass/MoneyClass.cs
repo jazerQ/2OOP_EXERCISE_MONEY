@@ -16,11 +16,21 @@ namespace MoneyClass
     public struct Money
     {
         public ulong Rubls { get; private set; }
-        private byte kopy;
-        public byte Kopy { get { return kopy; } set {
+        private short kopy;
+        public short Kopy { get { return kopy; } set {
                 if (value >= 100) {
                     Rubls += (ulong) value / 100;
-                    kopy =(byte)(value % 100);
+                    kopy =(short)(value % 100);
+                }
+                else if(value <= -100)
+                {
+                    Rubls -= (ulong)(value / 100);
+                    kopy = (short)(100 - Math.Abs(value) % 100);
+                }
+                else if(value < 0)
+                {
+                    kopy = (short) (100 - Math.Abs(value));
+                    Rubls -= 1;
                 }
                 else
                 {
@@ -32,9 +42,43 @@ namespace MoneyClass
         public void Print() {
             Console.WriteLine($"{Rubls} Рублей, {Kopy} Копеек");
         }
-        public Money(ulong rubls, byte kopyi) : this() {
+        public Money(ulong rubls, short kopyi) : this() {
             Rubls = rubls;
             this.Kopy = kopyi;
+        }
+        private decimal fullvalue;
+        public decimal FullValue { get {
+                fullvalue += Rubls;
+                if (Kopy.ToString().Length == 1)
+                {
+                    fullvalue += (decimal)(Kopy * Math.Pow(10, -(Kopy.ToString().Length +1)));
+                }
+                else
+                {
+                    fullvalue += (decimal)(Kopy * Math.Pow(10, -Kopy.ToString().Length));
+                }
+                return fullvalue;
+                    }  
+        }
+        public static Money operator +(Money a, Money b)
+        {
+            Money newMoney = new Money(a.Rubls + b.Rubls, (short)(a.Kopy + b.Kopy));
+            return newMoney;
+        }
+        public static Money operator -(Money a, Money b)
+        {
+            Money newMoney = new Money(a.Rubls - b.Rubls, (short)(a.Kopy - b.Kopy));
+            return newMoney;
+        }
+        public static Money operator *(Money a, int b)
+        {
+            Money newMoney = new Money(a.Rubls * (ulong)b , (short)(a.Kopy * b));
+            return newMoney;
+        }
+        public static Money operator /(Money a, int b)
+        {
+            Money newMoney = new Money(a.Rubls / (ulong)b, (short)(a.Kopy / b));
+            return newMoney;
         }
     }
 }

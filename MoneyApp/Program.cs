@@ -10,8 +10,13 @@ namespace MoneyClass
     {
         static void Main(string[] args)
         {
-            Money mon = new Money(53275275143, 125);
-            mon.Print();
+            Money mon1 = new Money(1200, 3);
+            Money mon2 = new Money(300, 5);
+            mon1.Print();
+            mon2.Print();
+            Money mon3 = mon1 - mon2;
+            mon3.Print();
+            Console.WriteLine(mon3.FullValue);
         }
     }
 }
