@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\MoneyClass\MoneyApp\bin\Debug\MoneyApp.exe.config
+C:\Users\user\source\repos\MoneyClass\MoneyApp\bin\Debug\MoneyApp.exe
+C:\Users\user\source\repos\MoneyClass\MoneyApp\bin\Debug\MoneyApp.pdb
+C:\Users\user\source\repos\MoneyClass\MoneyApp\bin\Debug\MoneyClass.dll
+C:\Users\user\source\repos\MoneyClass\MoneyApp\bin\Debug\MoneyClass.pdb
+C:\Users\user\source\repos\MoneyClass\MoneyApp\obj\Debug\MoneyApp.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\MoneyClass\MoneyApp\obj\Debug\MoneyApp.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MoneyClass\MoneyApp\obj\Debug\MoneyApp.csproj.Up2Date
+C:\Users\user\source\repos\MoneyClass\MoneyApp\obj\Debug\MoneyApp.exe
+C:\Users\user\source\repos\MoneyClass\MoneyApp\obj\Debug\MoneyApp.pdb

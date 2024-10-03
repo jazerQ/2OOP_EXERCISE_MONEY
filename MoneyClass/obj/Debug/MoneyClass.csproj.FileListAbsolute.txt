@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\MoneyClass\MoneyClass\bin\Debug\MoneyClass.dll
+C:\Users\user\source\repos\MoneyClass\MoneyClass\bin\Debug\MoneyClass.pdb
+C:\Users\user\source\repos\MoneyClass\MoneyClass\obj\Debug\MoneyClass.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\MoneyClass\MoneyClass\obj\Debug\MoneyClass.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\MoneyClass\MoneyClass\obj\Debug\MoneyClass.dll
+C:\Users\user\source\repos\MoneyClass\MoneyClass\obj\Debug\MoneyClass.pdb
